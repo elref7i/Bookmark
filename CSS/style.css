@@ -1,0 +1,112 @@
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+  font-weight: 500;
+}
+h2 {
+  font-family: 'Righteous', sans-serif;
+}
+::selection {
+  background-color: #f7bd5d;
+}
+.color-main {
+  background-color: #f7ecde;
+}
+.section-border::before {
+  content: '';
+  position: absolute;
+  border: 1.5px dotted #000;
+  width: 100%;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bg-green {
+  color: #3ea55b;
+}
+.color-41 {
+  color: #bb4120;
+}
+/* #FEC260 */
+.name-project {
+  width: fit-content;
+}
+.name-project::before {
+  content: '';
+  width: 100%;
+  height: 40%;
+  background-color: #fec260;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  transition: height 0.3s;
+}
+.name-project:hover::before {
+  height: 60%;
+}
+.second-title {
+  background-image: linear-gradient(
+    to right,
+    #3ea55b 0%,
+    #3ea55b 45%,
+    #b1ac49 55%,
+    #b1ac49 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  transition: background 2s;
+}
+.second-title:hover {
+  background-image: linear-gradient(
+    to right,
+    #b1ac49 0%,
+    #b1ac49 45%,
+    #3ea55b 55%,
+    #3ea55b 100%
+  );
+}
+/* #FADEB4 
+#D99C39*/
+.form-control {
+  transition: border-color 0.4s, box-shadoe 0.4s;
+}
+.form-control:focus {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 0.25rem #fadeb4;
+}
+.btn-success {
+  background-color: #d1512d;
+}
+.btn-success:hover {
+  background-color: #bb4120;
+}
+.btn-visit {
+  background-color: #9eb22b;
+  border: 2px solid #000;
+  color: #fff;
+  transition: color 0.4s, background 0.4s, border 0.4s;
+}
+.btn-visit:hover {
+  background-color: #8a9e23;
+  color: #fff;
+}
+.btn-visit:focus {
+  box-shadow: none;
+}
+.btn-visit:focus:active {
+  background-color: transparent;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.hint {
+  width: 500px;
+  background-color: #a5413e;
+}
+.hint .circle {
+  width: 18px;
+  height: 18px;
+  background-color: #f15f5d;
+  box-shadow: 23px 0px #febe2e, 46px 0px #4db748;
+}

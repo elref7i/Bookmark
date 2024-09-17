@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet" <!--*
+    Google Fonts -->
+  <link rel="stylesheet" href="/CSS/all.min.css">
+  <link rel="stylesheet" href="/CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="/CSS/style.css">
+  <title>BookMarker</title>
+</head>
+
+<body class="color-main">
+  <section class="BookMarker | py-5 ">
+    <div class="container position-relative">
+      <div class="section-border | position-relative text-center  pb-2">
+        <h1 class="name-project | position-relative m-auto text-center  mb-5 text-nowrap">
+          Bookmarker
+        </h1>
+      </div>
+      <h2 class="second-title |  m-auto py-4 fs-3 text-nowrap">
+        <span><i class="fa-solid fa-bookmark"></i></span>
+        Bookmark your favorite sites
+        <span><i class="fa-solid fa-bookmark"></i></span>
+      </h2>
+      <form action="" class="section-border | position-relative pb-3">
+        <label class="text-capitalize mb-2 fw-bold" for="site-name"><i class="fa-solid fa-book-bookmark pe-2"></i>Site
+          Name</label>
+        <input class="bg-light text-black form-control mb-4" type="text" id="site-name" placeholder="Bookmark Name"
+          oninput="validtion(nameRegex, nameInput)" />
+        <label class="text-capitalize mb-2 fw-bold" for="site-url"><i class="fa-solid fa-link pe-2"></i>Site
+          URL</label>
+        <input class="bg-light text-black form-control" type="url" id="site-url" placeholder="Website URL"
+          oninput="validtion(urlRegex,urlInput)" />
+        <button class="btn btn-success border-0 fs-5 px-5 my-4 d-block m-auto" type="button"
+          onclick="addBoomark()">Submit</button>
+      </form>
+      <div class="data py-4">
+        <table class="table bg-light text-center">
+          <thead>
+            <tr>
+              <th scope="col">Index</th>
+              <th scope="col">Website Name</th>
+              <th scope="col">Visit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody class="tableData" id="tableData"></tbody>
+        </table>
+      </div>
+      <div class="hint position-absolute start-50 top-50 translate-middle p-4 bg-light shadow-sm rounded-3 d-none"
+        id="messageValidation">
+        <div class="header-hint mb-5  d-flex justify-content-between align-items-center">
+          <div class="circle rounded-circle"></div>
+          <i class="fa-solid fa-xmark text-dark fs-4" onclick="closeWindowHint()" id="closeHint" role="button"></i>
+        </div>
+        <p class="h4 fs-5 mb-3 ">Site Name or Url is not valid, Please follow the rules below :</p>
+        <p class="h6 mb-3">
+          <i class="color-41 | fa-regular fa-circle-right"></i>
+          Site name must contain at least 3 characters
+        </p>
+        <p class="h6">
+          <i class="color-41 | fa-regular fa-circle-right"></i>
+          Site URL must be a valid one
+        </p>
+      </div>
+    </div>
+  </section>
+  <script src="/JS/index.js"></script>
+  <script src="/JS/bootstrap.bundle.js"></script>
+</body>
+
+</html>
