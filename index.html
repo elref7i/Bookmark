@@ -36,10 +36,12 @@
           URL</label>
         <input class="bg-light text-black form-control" type="url" id="site-url" placeholder="Website URL"
           oninput="validtion(urlRegex,urlInput)" />
-        <button class="btn btn-success border-0 fs-5 px-5 my-4 d-block m-auto" id="submitData" type="button"
-          onclick="addBoomark()">Submit</button>
-        <button class="btn btn-info border-0 fs-5 px-5 my-4 d-block m-auto d-none" id="buttonUpdateBookmark"
-          type="button" onclick="updateBookmark()">Update</button>
+        <div class="text-center my-3">
+          <button class="btn btn-success border-0 fs-5 px-5 my-4  m-auto" id="submitData" type="button"
+            onclick="addBoomark()">Submit</button>
+          <button class="btn btn-info border-0 fs-5 px-5 my-4 m-auto d-none" id="buttonUpdateBookmark" type="button"
+            onclick="updateBookmark()">Update</button>
+        </div>
         <input type="search" placeholder="search" class="form-control-sm border-0 " oninput="searchBookMark()"
           id="searchInput">
       </form>
